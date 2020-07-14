@@ -27,6 +27,7 @@ if x > 20;
 Print('Finis')
 ```
 =Smaller
+
 =Finis
 
 ### Repeated Steps (Loops)
@@ -37,13 +38,14 @@ while n > 0:
   n = n - 1
 print('Blastoff!')
 ```
+```python
 =5
 =4
 =3
 =2
 =1
 =Blastoff!
-
+```
 ## Variables
 A named place in memory where a program can store data and later retrieve the data using the variable  "name"
 You can change the contents of a variable in a later statement.
@@ -101,12 +103,14 @@ Python ignores anything after the # sign and treat it as comments
 
 ## Conditional Execution
 ### Comparison Operators 
+```python
 <
 <=
 == 
 >=
 >
 !=
+```
 
 ### One-Way Decisions
 ```python
