@@ -571,28 +571,188 @@ for line in fhand:
     count = count + 1
 print("there were", count, "subject lines in", fname)
 ```
+## Lists
+### Collection allow us to put many values into a single variable.
+```python
+friends = ['joseph', 'max', 'sam']
+```
+### Lists and definite loops = best pals 
+```python
+friends = ['joseph', 'max', 'sam']
+for friends in friends:
+  print('Happy new year:', friend)
+print('done!')
+```
+### Iterate through lists using index and square bracket
+```python
+friends = ['joseph', 'max', 'sam']
+friends[0]
+=joseph
+```
+### Lists are Mutable 
+you can change the values, unlike strings.
 
+### List Length
+```python 
+friends = ['joseph', 'max', 'sam']
+print(len(friends))
+=3
+```
+### Range Function
+```python
+print(range4))
+=[0, 1, 2, 3]
+friends = ['joseph', 'max', 'sam']
+print(len(friends))
+=3
+print(range(len(friends)))
+=[0, 1, 2]
+```
+### Concatenating lists
+```python
+a = [1, 2, 3]
+b = [5, 6, 7]
+c = a + b
+print(c)
+= [1,2,3,5,6,7]
+```
+### Slice Lists
+```python
+t = [1, 2 ,3 ,4, 5, 6]
+t[1:3]
+= [2, 3]
+```
+### Build a List from Scratch
+```python
+stuff = list()
+stuff.append('book')
+stuff.append(99)
+print(stuff)
+=['book', 99]
+```
+### Check if something is in a List
+```python
+some = [1, 9, 21, 10]
+9 in some
+=True
+15 in some
+=False
+20 not in some
+=True
+```
+### Sort List
+```python
+friends = ['joseph', 'max', 'sam']
+friends.sort()
+print(friends)
+=['joseph', 'max', 'sam']
+```
+### Built-in Functions and Lists
+```python
+nums = [3, 41, 12, 9, 74, 15]
+print(len(nums))
+=6
+print(max(nums))
+=74
+print(min(nums))
+=3
+print(sum(nums))
+=154
+print(sum(nums)/len(nums))
+=25.6
 
+```
+### Split Function
+```python
+abc = 'With three words'
+stuff = abc.split()
+print(stuff)
+=['With', 'three', 'words']
+```
+```python
+line = A lot     of spaces'
+etc = line.split()
+print(etc)
+=['A', 'lot', 'of, 'spaces']
+line = 'first;second;third'
+thing = line.split()
+print(thing)
+=['first;second;third']
+thing = line.split(';')
+print(thing)
+=['first', 'second', 'third']
+print(len(thing))
+3
+```
 
+## Python Dictionaries
+They are the Objects of Javascript
+They use keys: values instead of number/values
+### Dictionary Literals (Constants)
+Use curl braces and have a list of key:value pairs
+```python
+jjj = {'chuck' : 1, 'fred' : 42, 'jan': 100}
+print(jjj)
+={'jan': 100, 'chuck': 1, 'fred': 42}
+```
+You can make an empty dictionary using empty curly braces
+```python
+print(ooo)
+{}
+```
+### Counters with a Dictionary
+One common use of dictionaries is counting how often we "see" something
+```python
+ccc = dict()
+ccc['csev'] = 1
+ccc['cwen'] = 1
+```
+### Get Method for dictionaries
+```python
+if name in counts:
+  x = counts[name]
+else :
+  x = 0
+x = counts.get(name, 0)
+```
+### Counting Pattern
+The general pattern to count the words in a line of text is to split the line into words, then loop through the words and use a dictionary to track the count of each word independently.
+```python
+counts = dict()
+print('Enter a line of text:')
+line = input('')
+words = line.split()
+print('Words:', words)
+print('Counting...')
+for word in words:
+  count[word] = counts.get(word,0) + 1
+print('Counts', counts)
+```
+### Retrieving lists of Keys and Values
+```python
+jjj = {'chuck':1, 'fred':42, 'jan':100}
+print(jjj.keys())
+=['jan', 'chuck', 'fred']
+print(jjj.values())
+=[100,1,42]
+```
+or try
+```python
+jjj = {'chuck':1, 'fred':42, 'jan':100}
+for aaa,bbb in jjj.items()  :
+  print(aaa,bbb)
+```
+## Tuples Collection
+Tuples are immutable, more efficient, 
+```python
+z = (5, 4, 3)
+z[2] = 0
+= tuple does not support item assignement
+```
+### Double assignment statement
+```python
+(x, y) = (4, 'fred')
+```
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+## Regular Expressions
+Special characters used in python for matching strings of text
