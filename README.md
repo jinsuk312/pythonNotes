@@ -467,3 +467,25 @@ print(sppos)
 host = data[atpos+1 : sspos]
 print(host)
 gmail.com
+```
+## Files
+### Opening a File
+Before we can read the contents of a file we tell python which file and what we are doing with the file.
+open() function 
+handle = open(filename,mode)
+returns a handle use to manipulate the file
+filename is a string
+mode is optional and should be 'r' if we are planning to read the file and 'w' if we are going to write to the file
+```python
+fhand = open('mbox.txt')
+print(fhand)
+<_io.TextIOWrapper name='mbox.txt' mode='r' encoding='UTF=8'>
+```
+### Newline Character
+\n 
+```python
+stuff = 'Hello\nWorld!'
+print(stuff)
+=Hello
+=World!
+```
