@@ -1,5 +1,5 @@
 # pythonNotes
-Python notes
+Python 101 notes
 
 ## Reserved words
 False, class, return , is, finally, None, if, for , lambda, continue, True, def, from, while, nonlocal, and, del, global, not, with, as, elif, try , or, yield,  assert, else, import, pass, break, except, in, raise
@@ -47,6 +47,7 @@ print('Blastoff!')
 =Blastoff!
 ```
 ## Variables
+### Variables
 A named place in memory where a program can store data and later retrieve the data using the variable  "name"
 You can change the contents of a variable in a later statement.
 You must start with a letter or underscore. But underscore mainly used when communicating with python itself.
@@ -89,7 +90,7 @@ Integer division produces a floating point result
 print(10/2)
 =5.0
 ```
-### User Input
+## User Input
 Python can pause and read data from the user using the input() function
 input() returns a string
 ```python
@@ -98,7 +99,7 @@ print('Welcome' , yourName)
 ```
 The , represents a space in python.
 
-### Comments
+## Comments
 Python ignores anything after the # sign and treat it as comments
 
 ## Conditional Execution
@@ -226,7 +227,7 @@ while True:
   print(line)
 print('done!')
 ```
-## Iterations: Definite Loops
+### Definite Loops
 Looping of a finite set of things
 ```python
 for i in [5, 4, 3, 2, 1] :
@@ -240,7 +241,6 @@ for friend in friends :
   print('Happy New Year: ', friend)
 print('done')
 ```
-## Iterations: Loop Idioms
 ### Looping through a Set
 ```python
 for thing in [5, 4, 3, 2, 1] :
@@ -489,3 +489,110 @@ print(stuff)
 =Hello
 =World!
 ```
+### File Handle as a Sequence(READ ALL LINES)
+```python
+xfile = open('mbox.txt')
+for cheese in xfile:
+  print(cheese)
+```
+### Counting Lines in a File
+Open a file read-only
+Use a for loop to read each line
+Count the lines and print out the number of lines
+```python
+fhand = open('mbox.txt')
+count = 0
+for line in fhand:
+  count = count + 1
+print('Line Count:', count)
+```
+```python
+python open.py
+=Line Count: 132045
+```
+### Reading the WHOLE File
+Read the whole file into a single string
+```python
+fhand = open('mbox.txt')
+inp = fhand.read()
+print(len(inp))
+=94626
+print(inp[:20])
+From justin.kim@gma
+```
+### Searching through a File
+```python
+fhand = open('mbox.txt')
+for line in fhand: 
+  if line.startswith('From:') :
+    print(line)
+```
+### Skipping with continue ( Searching through File Fixed)
+```python
+fhand = open('mbox.txt')
+for line in fhand: 
+  line = line.rstrip()
+  if not line.startswith('From:') :
+    continue
+  print(line)
+```
+### Using in to select lines
+We can look for a string anywhere in a line as our selection criteria
+
+```python
+fhand = open('mbox.txt')
+for line in fhand: 
+  line = line.rstrip()
+  if not '@uct.ac.za' in line:
+    continue
+  print(line)
+```
+### Prompt for File Name
+```python
+fname = input('Enter file name: ')
+fhand = open(fname)
+count = 0
+for line in fhand:
+  if line.startswith('Subject:') :
+    count = count + 1
+print("there were", count, "subject lines in", fname)
+```
+### Dealing with Bad File Names
+```python
+fname = input('Enter file name: ')
+try:
+  fhand = open(fname)
+except:
+  print('file cannot be opened:', fname)
+  quit()
+count = 0
+for line in fhand:
+  if line.startswith('Subject:') :
+    count = count + 1
+print("there were", count, "subject lines in", fname)
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
