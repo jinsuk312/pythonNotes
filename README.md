@@ -352,6 +352,7 @@ print(len(letter))
 =6
 ```
 ### Looping through Strings
+While Loop
 ```python
 fruit = 'banana'
 index = 0
@@ -360,31 +361,109 @@ while index < len(fruit) :
   print(index,letter)
   index = index + 1
 ```
+For Loop
 ```python
-=b
-=a
-=n
-=a
-=n
-=a
+fruit = 'banana'
+for letter in fruit:
+  print(letter)
+```
+### Looping and Counting
+Simple loop that loops through each letter in a string and counts the number of times the loop encounters the 'a' character.
+```python
+word = 'banana'
+count = 0
+for letter in word:
+  if letter == 'a' :
+    count = count + 1
+print(count)
 ```
 
+### Slicing Strings
+```python
+s = 'Monty Python'
+print(s[0:4])
+=Mont
+print(s[6:7])
+=P
+print(s[6:20])
+=Python
+print(s[:2])
+=Mo
+print(s[8:])
+=thon
+print(s[:])
+=Monty Python
+```
+### String Concatenation
+```python
+a = 'Hello'
+b = a + "There'
+print(b)
+=HelloThere
+```
+### Using in as a logical Operator
+The in keyword can also be used to check to see if one string is "in" another string
+```python
+fruit = 'banana'
+'n' in fruit
+=True
+'m' in fruit
+=False
+'nan' in fruit
+=True
+```
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+### String Library
+Pythong has a number of string functions which are in the string library
+These functions are already built into every string
+We do not modify the original string, instead we return a new string that has been altered
+```python
+greet = 'Hello Bob'
+zap = greet.lower()
+print(zap)
+=hello bob
+```
+### Searching a String
+```python
+fruit = 'banana'
+pos = fruit.find('na')
+print(pos)
+=2
+```
+### Make everything Upper case
+```python
+greet = 'Hello Bob'
+nn = greet.upper()
+print(nn)
+=HELLO BOB
+```
+### Search and Replace
+```python
+greet = 'Hello Bob'
+nstr = greet.replace('Bob', 'Jane')
+print(nstr)
+=Hello Jane
+```
+### Stripping Whitespace
+```python
+greet = '   Hello Bob  '
+greet.lstrip()
+='Hello Bob  '
+greet.rstrip()
+='.   Hello Bob'
+greet.strip()
+='Hello Bob'
+```
+### Parsing and Extracting
+From justin@gmail.com Tue July 14 8:04:30:30 2020
+```python
+data = 'From justin@gmail.com Tue July 14 8:04:30:30 2020'
+atpos = data.find('@')
+print(atpos)
+=11
+sppos = data.find(' ',atpos)
+print(sppos)
+=21
+host = data[atpos+1 : sspos]
+print(host)
+gmail.com
