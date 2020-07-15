@@ -158,6 +158,223 @@ else :
 print('All done')
 ```
 
+### Try/Except
+to compensate for errors
+```python
+astr = 'Bob'
+try:
+  print('Hello')
+  istr = int(astr)
+  print('there')
+except: 
+  istr = -1
+print('Done', istr)
+```
+## Python Functions
+Two kinds of functions. Built in functions and functions we define ourselves.
+Function is reuseable code that takes arguments as inputs, does some computation, and returns something.
+### Max/Min Function
+```python
+big = max('Hello world')
+print(big)
+=w
+tiny = min('Hello world')
+print(tiny)
+=
+```
+### Parameters
+A variable which we use in the function definition. It is a handle that allows the code in the function to access the arguments for a particular function invocation.
+### Return Values
+Often a function will take its arguments, do some computations and returns a value to be used as the value of the function in the calling expressio. The return keyword is used for this. 
+
+## Loops & Iterations
+### While Loop
+```python 
+n = 5
+while n > 0 :
+  print(n)
+  n = n - 1
+print('blastoff!')
+print(n)
+```
+### Infinite Loop
+```python
+n = 5
+while n > 0 :
+  print('lather')
+  print('rinse')
+print('dry off!')
+```
+
+### Breaking out of Loop
+```python
+while True:
+  line = input('> ')
+  if line === 'done' :
+    break
+  print(line)
+print('done!')
+```
+### Finishing an iteration with continue
+```python
+while True:
+  line = input('> ')
+  if line[0] === '#' :
+    continue
+  if line === 'done' :
+    break
+  print(line)
+print('done!')
+```
+## Iterations: Definite Loops
+Looping of a finite set of things
+```python
+for i in [5, 4, 3, 2, 1] :
+  print(i)
+print('done')
+```
+definite loop with strings
+```python
+friends = ['joseph', 'jane', 'jessica']
+for friend in friends :
+  print('Happy New Year: ', friend)
+print('done')
+```
+## Iterations: Loop Idioms
+### Looping through a Set
+```python
+for thing in [5, 4, 3, 2, 1] :
+  print(thing)
+print('done')
+```
+### Finding the largest value
+We make a variable that contains the current largest vvalue. If the number we are looking at is larger, it is the new largest value.
+```python
+largest_so_far = -1
+print('Before', largest_so_far)
+for the_num in (9, 41, 12, 3, 74, 15] :
+  if the_num > largest_so_far :
+    largest_so_far = the_num
+  print(largest_so_far, the_num)
+print('After', largest_so_far)
+```
+### Counting in a loop
+To Count how many times we execute a loop, we introduce a counter variable that starts at 0 and we add one t oit each time through the loop.
+```python
+zork = 0
+print ('Before', zork)
+for i in [5, 4, 3, 2, 1] :
+zork = zork + 1
+  print(zork, i)
+print('done', zork)
+```
+### Summing in a Loop
+To add up a value we encounter in a loop, we introduce a sum variable that starts at 0 and we add the value to the sum each time through the loop
+```python
+zork = 0
+print ('Before', zork)
+for i in [5, 4, 3, 2, 1] :
+zork = zork + i
+  print(zork, i)
+print('done', zork)
+```
+### Finding the Average in a Loop
+An average combines the counting and sum patterns and divides when the loop is done.
+```python
+count = 0
+sum = 0
+print('Before', count, sum)
+for value in [9, 41, 12, 3, 74, 15] :
+  count = count + 1
+  sum = sum + value
+  print(count, sum, value)
+print('After', count, sum, sum / count)
+```
+### Filtering in a Loop
+We use an if statement in the loop to catch / filter the values we are looking for
+```python
+print('Before')
+for value in [9, 41, 12, 3, 74, 15] :
+  if value > 20:
+    print('Large number', value)
+  print('After')
+```
+### Search using a Boolean variable
+If we just want to search and know if a value was found, we use a variable that starts at False and is set to True as soon as we find what we are looking for.
+```python
+found = False
+print('Before', found)
+for value in [9, 41, 12, 3, 74, 15] :
+  if value == 3 :
+  found = True
+    print(found, value)
+  print('After', found)
+```
+### Find the smallest value
+```python
+smallest_so_far = 78
+print('Before', smallest_so_far)
+for the_num in (9, 41, 12, 3, 74, 15] :
+  if the_num < smallest_so_far :
+    smallest_so_far = the_num
+  print(smallest_so_far, the_num)
+print('After', smallest_so_far)
+```
+The first time we loop through smallest is None, so we take the first value to be the smallest.(9)
+```python
+smallest_so_far = None
+print('Before')
+for value in (9, 41, 12, 3, 74, 15] :
+  if smallest is None :
+    smallest = value
+  elif value < smallest :
+    print(smallest, value)
+print('After')
+```
+## Strings
+### String Data Type
+A string is a sequence of characters
+A string literal uses quotes like 'hi or "hi"
+For strings + means concatenate
+We can convert numbers in a string into a number using int()
+### Single characters in strings
+We can get any single character in a string using an index specified in square brackets.
+```python
+fruit = 'banana'
+letter = fruit[0]
+print(letter)
+=b
+```
+### Check string length
+```python
+fruit = 'banana'
+print(len(letter))
+=6
+```
+### Looping through Strings
+```python
+fruit = 'banana'
+index = 0
+while index < len(fruit) :
+  letter = fruit[index]
+  print(index,letter)
+  index = index + 1
+```
+```python
+=b
+=a
+=n
+=a
+=n
+=a
+```
+
+
+
+
+
+
+
 
 
 
